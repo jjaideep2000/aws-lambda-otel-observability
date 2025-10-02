@@ -1,26 +1,28 @@
 {
-  "name": "aws-lambda-otel-observability",
+  "name": "@company/lambda-observability",
   "version": "1.0.0",
-  "description": "AWS Lambda OpenTelemetry observability demo with SNS/SQS distributed tracing",
+  "description": "Zero-config observability library for AWS Lambda functions",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy-publisher": "cd src/publisher && zip -r ../../publisher.zip . && aws lambda update-function-code --function-name asyncdemo-publisher-x86 --zip-file fileb://../../publisher.zip",
-    "deploy-consumer": "cd src/consumer && zip -r ../../consumer.zip . && aws lambda update-function-code --function-name asyncdemo-consumer-temp --zip-file fileb://../../consumer.zip"
+    "build": "zip -r lambda-observability-layer.zip .",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "aws",
-    "lambda",
-    "opentelemetry",
-    "otel",
+    "aws-lambda",
     "observability",
-    "distributed-tracing",
-    "sns",
-    "sqs"
+    "opentelemetry",
+    "tracing",
+    "logging"
   ],
-  "author": "Your Name",
+  "author": "Platform Engineering Team",
   "license": "MIT",
   "dependencies": {
-    "@aws-sdk/client-sns": "^3.x.x"
+    "@opentelemetry/api": "^1.7.0"
+  },
+  "peerDependencies": {
+    "@aws-sdk/client-sns": "^3.x.x",
+    "@aws-sdk/client-sqs": "^3.x.x",
+    "@aws-sdk/client-dynamodb": "^3.x.x"
   }
 }
