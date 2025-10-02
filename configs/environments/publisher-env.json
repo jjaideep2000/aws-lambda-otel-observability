@@ -1,0 +1,8 @@
+{
+  "Variables": {
+    "AWS_LAMBDA_EXEC_WRAPPER": "/opt/otel-handler",
+    "OTEL_PROPAGATORS": "tracecontext,baggage",
+    "OTEL_RESOURCE_ATTRIBUTES": "service.name=asyncdemo-publisher,service.version=1.0.0",
+    "TOPIC_ARN": "arn:aws:sns:us-east-2:088153174619:asyncdemo-topic"
+  }
+}

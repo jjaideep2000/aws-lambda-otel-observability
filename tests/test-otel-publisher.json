@@ -1,0 +1,7 @@
+{
+  "Records": [
+    {
+      "body": "{\"customerId\":\"customer-12345\",\"orderId\":\"order-67890\",\"amount\":99.99,\"timestamp\":\"2024-01-15T10:30:00Z\"}"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "Variables": {
+    "AWS_LAMBDA_EXEC_WRAPPER": "/opt/otel-handler",
+    "OTEL_PROPAGATORS": "tracecontext,baggage",
+    "OTEL_RESOURCE_ATTRIBUTES": "service.name=asyncdemo-consumer,service.version=1.0.0"
+  }
+}
